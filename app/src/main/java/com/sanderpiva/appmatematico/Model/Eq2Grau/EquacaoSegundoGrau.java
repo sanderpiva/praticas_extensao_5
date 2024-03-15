@@ -17,8 +17,9 @@ import com.sanderpiva.appmatematico.R;
 
 public class EquacaoSegundoGrau extends AppCompatActivity {
     private android.widget.EditText a, operador1, operador2, b, c;
-    private android.widget.TextView resultado;
+    private android.widget.TextView resultado, resultado2, resultado3, resultado4, resultado5, resultado6, resultado7;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +47,13 @@ public class EquacaoSegundoGrau extends AppCompatActivity {
         operador1 = findViewById(R.id.editTextEqSegundoGrauOp1);
         b = findViewById(R.id.editTextCoeficienteB);
         operador2 = findViewById(R.id.editTextEqSegundoGrauOp2);
-        resultado=findViewById(R.id.textViewResutadoEquacaoSegundoGrau);
+        resultado=findViewById(R.id.textViewResutado1EquacaoSegundoGrau);
+        resultado2=findViewById(R.id.textViewResult2Eq2Grau);
+        resultado3=findViewById(R.id.textViewResult3Eq2Grau);
+        resultado4=findViewById(R.id.textViewResult4Eq2Grau);
+        resultado5=findViewById(R.id.textViewResult5Eq2Grau);
+        resultado6=findViewById(R.id.textViewResult6Eq2Grau);
+        resultado7=findViewById(R.id.textViewResult7Eq2Grau);
         c= findViewById(R.id.editTextEquacao2GrauCoeficienteC);
 
         android.widget.Button btncalcular = findViewById(R.id.btnCalcularEquacaoSegundoGrau);
@@ -103,19 +110,25 @@ public class EquacaoSegundoGrau extends AppCompatActivity {
                                 double resultadoSemSinalC = Math.abs(resultadoOriginalC);
 
                                 resultado.setText("a = +"+eq2.getResA()+" b= "+resOperador1+resultadoSemSinalB+
-                                         " c = "+resOperador2+resultadoSemSinalC+" -> "+
-                                         "Raiz da equacao 2º, y = 0, " +" 0 = "+
+                                         " c = "+resOperador2+resultadoSemSinalC+" -> ");
+                                resultado2.setText(
+                                        "Raiz da equacao 2º, y = 0, " +" 0 = "+
                                         eq2.getResA()+"x2 "+resOperador1+resultadoSemSinalB+
-                                         "x "+resOperador2+resultadoSemSinalC+" -> "+eq2.getResA()+"x2 "
-                                         +resOperador1+resultadoSemSinalB+
-                                         "x "+resOperador2+resultadoSemSinalC+" = 0"+
-                                        " e Δ = "+"b2 -4 *a *c = "+"("+resOperador1+resultadoSemSinalB+")"+" ^2 "+" - "+"4"+" * "
-                                        +eq2.getResA()+" * "+eq2.getResC()+
-                                        " = "+Math.pow(eq2.getResB(), 2) + " "+comp1+" = "
-                                        +delta+" -> "+
-                                        "x1 ="+"(-b + √Δ)/2*a = "+eq2.getResB() * -1+" + "+
-                                        raizDelta+" / "+" 2* "+eq2.getResA()+" = "+nx1+" / "+dx1+" = "+x1+" -> "+
-                                        "x2 ="+"(-b - √Δ)/2*a = "+eq2.getResB() * -1+" - "+
+                                        "x "+resOperador2+resultadoSemSinalC+" -> ");
+                                resultado3.setText(eq2.getResA()+"x2 "+resOperador1+resultadoSemSinalB+
+                                        "x "+resOperador2+resultadoSemSinalC+" = 0"+" -> Δ = "+"b2 -4 *a *c = ");
+                                resultado4.setText("("+resOperador1+resultadoSemSinalB+")"+" ^2 "+" - "+"4"+" * "+
+                                        + eq2.getResA() + " * " + eq2.getResC() + " = "+
+                                        Math.pow(eq2.getResB(), 2) + " "+comp1+" = "
+                                        + delta);
+                                resultado5.setText(" -> "
+                                                +"x1 ="+"(-b + √Δ)/2*a = "+eq2.getResB() * -1+" + "
+
+                                                );
+                                resultado6.setText(
+                                                raizDelta+" / "+" 2* "+eq2.getResA()+" = "+nx1+" / "+dx1+" = "+x1+" -> "
+                                        );
+                                resultado7.setText("x2 ="+"(-b - √Δ)/2*a = "+eq2.getResB() * -1+" - "+
                                         raizDelta+" / "+" 2* "+eq2.getResA()+" = "+nx2+" / "+dx2+" = "+x2);
 
                             }
@@ -130,7 +143,7 @@ public class EquacaoSegundoGrau extends AppCompatActivity {
                                 // Obtendo o valor sem sinal usando Math.abs()
                                 double resultadoSemSinalC = Math.abs(resultadoOriginalC);
 
-                                resultado.setText("a = +" + eq2.getResA() +
+                                /*resultado.setText("a = +" + eq2.getResA() +
                                         " b = " + resOperador1 + resultadoSemSinalB +
                                         " c = " + resOperador2 + resultadoSemSinalC + " -> " +
                                         "Raiz da equacao 2º, y = 0, " + " 0 = " +
@@ -151,6 +164,33 @@ public class EquacaoSegundoGrau extends AppCompatActivity {
                                         "\u221A" + delta + ") / (2 * " + eq2.getResA() + ")"+
                                         " = ("+eq2.getResB() * -1 + " - " +
                                         "\u221A" + delta + ") / (" +2*eq2.getResA() + ")");
+                                    */
+                                resultado.setText("a = +" + eq2.getResA() +
+                                        " b = " + resOperador1 + resultadoSemSinalB +
+                                        " c = " + resOperador2 + resultadoSemSinalC + " -> ");
+                                resultado2.setText("Raiz da equacao 2º, y = 0, " + " 0 = " +
+                                        eq2.getResA() + "x2 " + resOperador1 + resultadoSemSinalB +
+                                        "x " + resOperador2 + resultadoSemSinalC + " -> "
+                                );
+                                resultado3.setText(eq2.getResA() + "x2 " + resOperador1 + eq2.getResB() +
+                                        "x " + resOperador2 + resultadoSemSinalC + " = 0"+" -> Δ = " + "b2 - 4 * a * c = "
+                                );
+                                resultado4.setText("("+resOperador1+eq2.getResB()+")"+" ^2 "+
+                                " - " + "4" + " * "
+                                        + eq2.getResA() + " * " + eq2.getResC() + " = "+
+                                        Math.pow(eq2.getResB(), 2) + " "+comp1+" = "
+                                        + delta + " -> ");
+                                resultado5.setText(
+                                        "x1 = (-b + √Δ) / (2 * a) = (" + eq2.getResB() * -1 + " + " +
+                                        "\u221A" + delta + ") / (2 * " + eq2.getResA() + ")"
+                                        );
+                                resultado6.setText(" = ("+eq2.getResB() * -1 + " + " +
+                                        "\u221A" + delta + ") / (" +2*eq2.getResA() + ")"+" -> x2 = (-b - √Δ) / (2 * a) = "
+                                        );
+                                resultado7.setText("("+eq2.getResB() * -1 + " - " +
+                                        "\u221A" + delta + ") / (2 * " + eq2.getResA() + ")"+
+                                        " = ("+eq2.getResB() * -1 + " - " +
+                                        "\u221A" + delta + ") / (" +2*eq2.getResA() + ")");
 
                             }
                         }else{
@@ -163,7 +203,7 @@ public class EquacaoSegundoGrau extends AppCompatActivity {
                             // Obtendo o valor sem sinal usando Math.abs()
                             double resultadoSemSinalC = Math.abs(resultadoOriginalC);
 
-                            resultado.setText("a = +" + eq2.getResA() +
+                            /*resultado.setText("a = +" + eq2.getResA() +
                                             " b = " + resOperador1 + resultadoSemSinalB +
                                             " c = " + resOperador2 + resultadoSemSinalC + " -> " +
                                     "Raiz da equacao 2º, y = 0, " + " 0 = " +
@@ -174,7 +214,26 @@ public class EquacaoSegundoGrau extends AppCompatActivity {
                                     "Δ negativo, sem raizes -> "+
                                     "b2 -4 *a *c = "+"("+resOperador1+resultadoSemSinalB+")"+" ^2 "+" - "+"4"+" * "
                                             +eq2.getResA()+" * "+eq2.getResC()+" = "+pow(eq2.getResB(),2)
+                                    +" "+comp1+" = "+delta);*/
+                            resultado.setText("a = +" + eq2.getResA() +
+                                    " b = " + resOperador1 + resultadoSemSinalB +
+                                    " c = " + resOperador2 + resultadoSemSinalC + " -> " );
+                            resultado2.setText("Raiz da equacao 2º, y = 0, " + " 0 = " +
+                                    eq2.getResA() + "x2 " + resOperador1 + resultadoSemSinalB+
+                                    "x " + resOperador2 + resultadoSemSinalC + " -> "
+                            );
+                            resultado3.setText(
+                                    eq2.getResA() + "x2 " + resOperador1 + resultadoSemSinalB+
+                                    "x " + resOperador2 + resultadoSemSinalC + " = 0 -> "
+                            );
+                            resultado4.setText(
+                                    "Δ negativo, sem raizes -> "
+                            );
+                            resultado5.setText("b2 -4 *a *c = "+"("+resOperador1+resultadoSemSinalB+")"+" ^2 "+" - "+"4"+" * "
+                                    +eq2.getResA()+" * "+eq2.getResC());
+                            resultado6.setText(" = "+pow(eq2.getResB(),2)
                                     +" "+comp1+" = "+delta);
+                            resultado7.setText("");
                         }
                     }
                     else{

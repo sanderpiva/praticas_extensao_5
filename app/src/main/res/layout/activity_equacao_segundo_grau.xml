@@ -73,10 +73,10 @@ android:fillViewport="true">
         android:layout_marginBottom="@dimen/dimens2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResutadoEquacaoSegundoGrau"
-        app:layout_constraintVertical_bias="0.862"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResutado1EquacaoSegundoGrau"
+        app:layout_constraintVertical_bias="0.952"
         app:srcCompat="@drawable/logotipo" />
 
     <Button
@@ -125,15 +125,15 @@ android:fillViewport="true">
         app:layout_constraintTop_toBottomOf="@+id/textViewOperador1" />
 
     <TextView
-        android:id="@+id/textViewResutadoEquacaoSegundoGrau"
-        android:layout_width="379dp"
-        android:layout_height="197dp"
+        android:id="@+id/textViewResutado1EquacaoSegundoGrau"
+        android:layout_width="380dp"
+        android:layout_height="25dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:justificationMode="inter_word"
         android:text="Resultado"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
@@ -262,6 +262,73 @@ android:fillViewport="true">
         android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/editTextEqSegundoGrauOp2"
         app:layout_constraintTop_toBottomOf="@+id/textViewPratique" />
+
+    <TextView
+        android:id="@+id/textViewResult2Eq2Grau"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResutado1EquacaoSegundoGrau" />
+
+    <TextView
+        android:id="@+id/textViewResult3Eq2Grau"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult2Eq2Grau" />
+
+    <TextView
+        android:id="@+id/textViewResult4Eq2Grau"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult3Eq2Grau" />
+
+    <TextView
+        android:id="@+id/textViewResult5Eq2Grau"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult4Eq2Grau" />
+
+    <TextView
+        android:id="@+id/textViewResult6Eq2Grau"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult5Eq2Grau" />
+
+    <TextView
+        android:id="@+id/textViewResult7Eq2Grau"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult6Eq2Grau" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

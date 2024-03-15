@@ -76,7 +76,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewResutadoEquacaoPrimeiroGrau"
+            app:layout_constraintTop_toBottomOf="@+id/textViewResutado1EquacaoPrimeiroGrau"
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/logotipo" />
 
@@ -126,9 +126,9 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewValorX" />
 
         <TextView
-            android:id="@+id/textViewResutadoEquacaoPrimeiroGrau"
-            android:layout_width="385dp"
-            android:layout_height="129dp"
+            android:id="@+id/textViewResutado1EquacaoPrimeiroGrau"
+            android:layout_width="378dp"
+            android:layout_height="25dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
@@ -238,6 +238,28 @@
             android:text="b: coeficiente linear"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewOperador" />
+
+        <TextView
+            android:id="@+id/textViewResult2Eq1grau"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewResutado1EquacaoPrimeiroGrau" />
+
+        <TextView
+            android:id="@+id/textViewResult3Eq1grau"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewResult2Eq1grau" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

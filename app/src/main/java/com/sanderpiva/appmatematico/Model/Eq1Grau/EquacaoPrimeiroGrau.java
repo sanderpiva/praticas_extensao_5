@@ -14,10 +14,11 @@ import com.sanderpiva.appmatematico.R;
 public class EquacaoPrimeiroGrau extends AppCompatActivity {
 
     private android.widget.EditText a, operador, b;
-    private android.widget.TextView resultado;
+    private android.widget.TextView resultado, resultado2, resultado3;
     private android.widget.Button btncalcular;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +46,9 @@ public class EquacaoPrimeiroGrau extends AppCompatActivity {
         a = findViewById(R.id.editTextCoeficienteAngular);
         operador = findViewById(R.id.editTextOperadorEqPrimeiroGrau);
         b = findViewById(R.id.editTextCoeficienteB);
-        resultado=findViewById(R.id.textViewResutadoEquacaoPrimeiroGrau);
+        resultado=findViewById(R.id.textViewResutado1EquacaoPrimeiroGrau);
+        resultado2=findViewById(R.id.textViewResult2Eq1grau);
+        resultado3=findViewById(R.id.textViewResult3Eq1grau);
 
         android.widget.Button btncalcular = findViewById(R.id.btnCalcularEquacaoPrimeiroGrau);
         btncalcular.setOnClickListener(new View.OnClickListener() {
@@ -70,39 +73,42 @@ public class EquacaoPrimeiroGrau extends AppCompatActivity {
                     if(resOperador.equals("+")) {
                         ProcessaEq1 eq1 = new ProcessaEq1(resA, resOperador, resB);
                         resultado.setText(
-                                "Raiz equacao 1 grau: y = 0, logo -> "+" 0 = "+
-                                +eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+" -> "
-                                +eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+"= 0"+" -> "+eq1.getA()+"x"+" = "+eq1.getB()*-1+" -> "+
+                                "Raiz equacao 1 grau:");
+                        resultado2.setText("y = 0, logo -> "+" 0 = "+
+                                eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+" -> "+
+                                eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+"= 0"+" -> ");
+                        resultado3.setText(eq1.getA()+"x"+" = "+eq1.getB()*-1+" -> "+
                                 "x"+" = "+eq1.getB()*-1+" / "+eq1.getA()+" = "+eq1.calculaEq1());
                     }
                     else if(resOperador.equals("-")) {
                         ProcessaEq1 eq1 = new ProcessaEq1(resA, resOperador, resB);
-                        resultado.setText(
-                                "Raiz equacao 1 grau: y = 0, logo -> "+" 0 = "+
-                                +eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+" -> "
-                                +eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+"= 0"+" -> "+eq1.getA()+"x"+" = "+eq1.getB()*1+" -> "+
+                        resultado.setText("Raiz equacao 1 grau:" );
+                        resultado2.setText("y = 0, logo -> "+" 0 = "+
+                                +eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+" -> "+
+                                eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+"= 0"+" -> ");
+                        resultado3.setText(eq1.getA()+"x"+" = "+eq1.getB()*1+" -> "+
                                 "x"+" = "+eq1.getB()+" / "+eq1.getA()+" = "+eq1.calculaEq1());
                     }
 
                     else if(resOperador.equals("/")){
                         ProcessaEq1 eq1 = new ProcessaEq1(resA, resOperador, resB);
-                        resultado.setText(
-                                "Raiz equacao 1 grau: y = 0, logo -> "+" 0 = "+
-                                +eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+" -> "
-                                +eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+" = 0"+" -> "
-                        +eq1.getA()+"x = "+eq1.getB()+"* 0 -> "+eq1.getA()+"x = "+"0"+" -> x = 0"+"/"+eq1.getA()
-                        +" -> "+"x = 0");
-
+                        resultado.setText("Raiz equacao 1 grau:");
+                        resultado2.setText("y = 0, logo -> "+" 0 = "+
+                                +eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+" -> "+
+                                eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+" = 0"+" -> ");
+                        resultado3.setText(
+                                eq1.getA()+"x = "+eq1.getB()+"* 0 -> "+eq1.getA()+"x = "+"0"+" -> x = 0"+"/"+eq1.getA()
+                                +" -> "+"x = 0");
                     }
 
                     else if(resOperador.equals("*")){
                         ProcessaEq1 eq1 = new ProcessaEq1(resA, resOperador, resB);
-                        resultado.setText(
-                                "Raiz equacao 1 grau: y = 0, logo -> "+" 0 = "+
-                                +eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+" -> "
-                                +eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+" = 0"+" -> "+eq1.getA()*eq1.getB()+"x = 0 "
-                        +" -> "+" x = 0"+"/"+eq1.getA()*eq1.getB()+" -> "+"x = 0");
-
+                        resultado.setText("Raiz equacao 1 grau:");
+                        resultado2.setText("y = 0, logo -> "+" 0 = "+
+                                +eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+" -> "+
+                                eq1.getA()+"x"+""+eq1.getOp()+" "+eq1.getB()+" = 0"+" -> ");
+                        resultado3.setText(eq1.getA()*eq1.getB()+"x = 0 "
+                                +" -> "+" x = 0"+"/"+eq1.getA()*eq1.getB()+" -> "+"x = 0");
                     }
 
                     else{
