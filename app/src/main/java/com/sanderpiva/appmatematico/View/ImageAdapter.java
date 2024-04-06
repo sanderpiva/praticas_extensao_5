@@ -11,9 +11,9 @@ import com.sanderpiva.appmatematico.R;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;
-    private int[] mImageIds = { R.drawable.image2x, R.drawable.image2x,
-            R.drawable.image2x, R.drawable.image2x, R.drawable.image2, R.drawable.image3,
-            R.drawable.image4, R.drawable.image1, R.drawable.image5, R.drawable.image6a};
+    private int[] mImageIds = { R.drawable.i_area_quadrado, R.drawable.i_perimetro_quadrado,
+            R.drawable.i_seno_cosseno_tangente, R.drawable.i_pitagoras, R.drawable.i_pa, R.drawable.i_pg,
+            R.drawable.i_proporcao, R.drawable.i_porcentagem, R.drawable.i_eq_1_grau, R.drawable.image6a};
 
     public ImageAdapter(Context c) {
         mContext = c;

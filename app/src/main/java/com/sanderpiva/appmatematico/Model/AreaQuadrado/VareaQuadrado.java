@@ -10,7 +10,7 @@ import android.webkit.WebViewClient;
 
 import com.sanderpiva.appmatematico.R;
 
-public class VareaQuadrado extends AppCompatActivity {
+public class  VareaQuadrado extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

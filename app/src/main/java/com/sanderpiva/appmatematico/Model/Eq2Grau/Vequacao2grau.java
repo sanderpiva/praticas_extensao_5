@@ -17,7 +17,7 @@ public class Vequacao2grau extends AppCompatActivity {
 
         WebView webView = findViewById(R.id.webview);
         webView.getSettings().setJavaScriptEnabled(true);
-        String url = "https://www.youtube.com/playlist?list=PLqSrxnZNkztq5nCYKEAg2o_1gwL9g1XdA";
+        String url = "https://www.youtube.com/watch?v=HCylt5HtFMs&list=PLGyv8aUrOlzBk-ctqa9e7jBlLxnqGcrho";
         //https://www.youtube.com/playlist?list=PLCXV5OW8ZZO8bpGnfT3L_G94zUysog06f
         webView.loadUrl(url);
 
