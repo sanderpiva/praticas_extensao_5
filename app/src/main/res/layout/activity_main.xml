@@ -26,7 +26,7 @@
         android:layout_width="155dp"
         android:layout_height="167dp"
         android:layout_marginTop="216dp"
-        android:src="@drawable/logo"
+        android:src="@drawable/logo2"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="@+id/guideline"
