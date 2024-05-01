@@ -22,7 +22,7 @@ android:fillViewport="true">
         android:layout_marginEnd="@dimen/dim_marge"
         android:justificationMode="inter_word"
         android:padding="0dp"
-        android:text="Equacao 2º grau:  é uma equação do tipo ax2+bx+c=0, em que a, b e c são número reais, conhecidos como coeficientes da equação. Raíz da equação 2º: y = 0. Fórmulas: Δ = (b² - 4*a*c) -> x = ±√Δ/2a"
+        android:text="Equacao 2º grau é uma equação do tipo ax²+bx+c = 0, em que a, b e c são número reais, conhecidos como coeficientes da equação. Raiz: y = ax²+bx+c -> 0 = ax²+bx+c. Fórmulas: Δ = (b² - 4*a*c) -> x = ±√Δ/2a"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

@@ -23,7 +23,7 @@
             android:justificationMode="inter_word"
             android:padding="0dp"
             android:text="Equacao 1º grau é uma equação que possui incógnita com grau 1. Equações são sentenças matemáticas que possuem incógnitas, as quais são letras que representam valores desconhecidos, e igualdade.
-            Fórmula ax + b = 0, em que a e b são números reais, e a é diferente de 0. Raíz da equação 1º: y = 0"
+            Fórmula ax + b = 0, em que a e b são números reais, e a é diferente de 0. Raíz: y = ax + b -> 0 = ax + b"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
