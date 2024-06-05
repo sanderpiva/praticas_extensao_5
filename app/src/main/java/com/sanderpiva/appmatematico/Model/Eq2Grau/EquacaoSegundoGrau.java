@@ -150,10 +150,10 @@ public class EquacaoSegundoGrau extends AppCompatActivity {
                                         eq2.getResA() + "x² " + resOperador1 + resultadoSemSinalB +
                                         "x " + resOperador2 + resultadoSemSinalC + " -> "
                                 );
-                                resultado3.setText(eq2.getResA() + "x² " + resOperador1 + eq2.getResB() +
+                                resultado3.setText(eq2.getResA() + "x² " + resOperador1 + resultadoSemSinalB +
                                         "x " + resOperador2 + resultadoSemSinalC + " = 0"+" -> Δ = " + "b² - 4 * a * c = "
                                 );
-                                resultado4.setText("("+resOperador1+eq2.getResB()+")"+" ^2 "+
+                                resultado4.setText("("+resOperador1+resultadoSemSinalB+")"+" ^2 "+
                                 " - " + "4" + " * "
                                         + eq2.getResA() + " * " + eq2.getResC() + " = "+
                                         Math.pow(eq2.getResB(), 2) + " "+comp1+" = "
